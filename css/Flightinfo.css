@@ -166,7 +166,7 @@
 .cardheader h2
 {
     font-weight: 600;
-    color:var(--blue);
+    color:var(--red);
 }
 
 .cardheader .btn
@@ -242,7 +242,7 @@ td{
 .status.ok
 {
     padding: 2px 15px;
-    background: rgb(156, 13, 13);
+    background: rgb(12, 176, 20);
     color:var(--white);
     border-radius:4px ;
     font-size:14px;

@@ -161,7 +161,6 @@ body
 /*===================Main======================*/
 .main
 {
-    position:fixed;
     width:auto;
     top: 10vh;
     min-height:100vh;

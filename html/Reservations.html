@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flight Informations</title>
+    <title>My Reservations</title>
     <!--main (css)-->
     <link rel="stylesheet" href="../css/main.css" />
     <!--(css)-->
-    <link rel="stylesheet" href="../css/Flightinfo.css" />
+    <link rel="stylesheet" href="../css/reservation.css" />
   </head>
   <body>
     <!--Navigation-->
@@ -66,65 +66,41 @@
     </div>
       <!--===========Main=============-->
       <div class="main">
-        <form action="" method="POST">
-          <div class="topbar">
-            <div class="dropdown">Departure Airport 
-                <select class="drop-btn" name="" id="">
-                  <option value="">country 1</option>
-                  <option value="">country 2</option>
-                  <option value="">country 3</option>
-                  <option value="">country 4</option>
-                </select>
-            </div>
-  
-            <div class="dropdown">Destination Airport 
-              <select class="drop-btn" name="" id="">
-                <option value="">country 1</option>
-                <option value="">country 2</option>
-                <option value="">country 3</option>
-                <option value="">country 4</option>
-              </select>
-            </div>
-  
-            <label for="" class="cal">Landing Date  <input type="date" id="cale" name="d-date" /></label>
-              <button class="drop-btn">Submit</button>
-              <button class="drop-btn">Reset</button>
-            
-          </div>
-        </form>
-        
-
         <!--=============user management============-->
         <div class="details">
           <div class="recent">
             <div class="cardheader">
-              <h2>Flights</h2>
-              <a href="#" class="btn">View All</a>
+              <h2>My Reservations <a class="drop-btn" style="background-color: rgb(5, 187, 5); color: rgb(245, 245, 245); text-decoration: none; right: 3vh;
+                position: absolute;" href="../html/Userflights.html">Book Now</a></h2>
             </div>
 
             <table>
               <thead>
-                <tr>
-                  <td>Take-off Airpot</td>
+                <tr style="margin-bottom: 2vh;">
                   <td>Take-off Date</td>
-                  <td>Take-off Time</td>
-                  <td>Landing Airport</td>
-                  <td>Landing Date</td>
-                  <td>Landing Time</td>
+                  <td>Ticket Id</td>
+                  <td>Flight Id</td>
+                  <td>Class</td>
+                  <td>Seats</td>
+                  <td>From</td>
+                  <td>To</td>
+                  <td>Time</td>
+                </tr>
+                <tr>
+                  <td></td>
                 </tr>
               </thead>
 
               <tbody>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td>21.03.2022</td>
+                  <td>SV8832H</td>
+                  <td>HAS1242889A</td>
+                  <td>Economy</td>
+                  <td>3</td>
+                  <td>Colombo</td>
+                  <td>Melbourne</td>
+                  <td>10.25AM</td>
                 </tr>
               </tbody>
 
@@ -136,9 +112,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
 
@@ -150,9 +125,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
 
@@ -164,9 +138,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
 
@@ -178,9 +151,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
 
@@ -192,9 +164,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
 
@@ -206,9 +177,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
 
@@ -220,9 +190,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
-                    <input type="submit" class="status ok" value="Book Now" />
-                  </td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>

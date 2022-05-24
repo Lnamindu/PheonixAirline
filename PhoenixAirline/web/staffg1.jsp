@@ -21,9 +21,10 @@
     <% //In case, if StaffG1 session is not set, redirect to Login page
         if ((request.getSession(false).getAttribute("staffg1") == null)) {
     %>
-    <jsp:forward page="/login.jsp"></jsp:forward>
     <%}%>
     <body>
+        
+
         <div class="container">
       <div class="navigation">
         <div class="logo">
@@ -83,52 +84,41 @@
  
             <!--===========Main=============-->
       <div class="main">
-<!--        <form action="" method="POST">
+        <form  action="SearchUsers_sServlet" method="POST">
           <div class="topbar">
-            <div class="dropdown">Departure Airport 
-                <select class="drop-btn" name="" id="">
-                  <option value="">country 1</option>
-                  <option value="">country 2</option>
-                  <option value="">country 3</option>
-                  <option value="">country 4</option>
+              
+            <div class="dropdown"><input type="text" name="search_user" placeholder="View User">
+                <select class="drop-btn" name="search_type">
+                  <option value="email">Email </option>
+                  <option value="username">Username</option>
                 </select>
             </div>
   
-            <div class="dropdown">Destination Airport 
+<!--            <div class="dropdown">Destination Airport 
               <select class="drop-btn" name="" id="">
                 <option value="">country 1</option>
                 <option value="">country 2</option>
                 <option value="">country 3</option>
                 <option value="">country 4</option>
               </select>
-            </div>
+            </div>-->
   
-            <label for="" class="cal">Landing Date  <input type="date" id="cale" name="d-date" /></label>
-              <button class="drop-btn">Submit</button>
-              <button class="drop-btn">Reset</button>
+            <!--<label for="" class="cal">Landing Date  <input type="date" id="cale" name="d-date" /></label>-->
+            <button type="submit"  value="View Users" name="view_users" class="drop-btn">View User</button>
             
           </div>
-        </form>-->
+        </form>
           
 
         <div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></div>
 
-        <form action="SearchUsers_sServlet" method="POST">
-            <h3>View Users</h3>
-            <input type="text" name="search_user" value="" />
-            <select name="search_type">
-                <option value="email">Email</option>
-                <option value="username">Username</option>
-            </select>
-            <input type="submit" value="View Users" name="view_users" />
-        </form>
 
         <table border="1">
             <thead>
             </thead>
         </table>
             
-             <!--=============user management============-->
+             <!--=============flight management============-->
         <div class="details">
           <div class="recent">
             <div class="cardheader">

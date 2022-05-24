@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flight Informations</title>
+    <title>User Informations</title>
     <!--main (css)-->
     <link rel="stylesheet" href="css/main.css" />
     <!--(css)-->
@@ -66,9 +66,11 @@
                 </a>
             </li> -->
             <li>
-                <a href="#">
-                    <span class="title">Sign Out</span>
-                </a>
+    <a href="<%=request.getContextPath()%>/LogoutServlet">
+        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+        <span class="title">Sign Out</span>
+    </a>
+
             </li>
            
         </ul>
@@ -76,9 +78,6 @@
             
             <!--end navbar-->
             
-            <br><br><br><br><br><br><br>
-
-            <center style="z-index: 900; margin-bottom: 200px"> <%=session.getAttribute("staffg1")%> </center>
 
        
  
@@ -87,11 +86,15 @@
         <form  action="SearchUsers_sServlet" method="POST">
           <div class="topbar">
               
-            <div class="dropdown"><input type="text" name="search_user" placeholder="View User">
+            <div class="dropdown"><input class="drop-btn" type="text" name="search_user" placeholder="User Name">
                 <select class="drop-btn" name="search_type">
-                  <option value="email">Email </option>
                   <option value="username">Username</option>
+                  <option value="email">Email </option>
+                  
                 </select>
+                
+                            <button type="submit"  value="View Users" name="view_users" class="drop-btn">View User</button>
+
             </div>
   
 <!--            <div class="dropdown">Destination Airport 
@@ -104,13 +107,12 @@
             </div>-->
   
             <!--<label for="" class="cal">Landing Date  <input type="date" id="cale" name="d-date" /></label>-->
-            <button type="submit"  value="View Users" name="view_users" class="drop-btn">View User</button>
             
           </div>
         </form>
           
 
-        <div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></div>
+        <!--<div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></div>-->
 
 
         <table border="1">
@@ -123,12 +125,12 @@
           <div class="recent">
             <div class="cardheader">
               <h2>User Management </h2>
-              <a href="#" class="btn">View All</a>
+              <a href="AddUser.jsp" style="text-decoration: none" class="status ok">Add User</a>
             </div>
 
             <table>
-              <thead>
-                <tr>
+                <thead >
+                    <tr style="box-shadow: 0 1px 10px black; border-radius: 12px ">
                   <td>First Name</td>
                   <td>Last Name</td>
                   <td>Email</td>
@@ -155,7 +157,7 @@
                     <td><%=it.next()%></td>
                   <td>
                     <input type="submit"  class="status ok" value="Update" />
-                    <input type="submit" class="status ok" value="Delete" />
+                    <input type="submit" class="status not" value="Delete" />
 
                   </td>
                 </tr>

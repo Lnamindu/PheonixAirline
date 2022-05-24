@@ -210,7 +210,7 @@ td{
 .details .recent table tbody tr:hover
 {
     background: var(--black);
-    color:var(--white);
+    color:rgb(86, 1, 1);
     
     
 }
@@ -251,12 +251,29 @@ td{
 
 }
 
+.status.not
+{
+    padding: 2px 15px;
+    background: var(--red);
+    color:var(--white);
+    border-radius:4px ;
+    font-size:14px;
+    font-weight: 400;
+    border: #fff;
+
+}
+
 .status.ok:hover
 {
     font-size: 15px;
     font-weight: 500;
 }
 
+.status.not:hover
+{
+    font-size: 15px;
+    font-weight: 500;
+}
 
 .cal
 {

@@ -31,24 +31,24 @@
                     <span class="title">Reservations</span>
                 </a>
             </li>
-            <li>
+<!--            <li>
                 <a href="#">
                     <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
                     <span class="title">Messages</span>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="../html/Userprofile.html">
                     <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                     <span class="title">Profile</span>
                 </a>
             </li>
-            <li>
+<!--            <li>
                 <a href="#">
                     <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                     <span class="title">Settings</span>
                 </a>
-            </li>
+            </li>-->
             <!-- <li>
                 <a href="#">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
@@ -64,6 +64,8 @@
            
         </ul>
     </div>
+        
+        
       <!--===========Main=============-->
       <div class="main">
         <form action="" method="POST">

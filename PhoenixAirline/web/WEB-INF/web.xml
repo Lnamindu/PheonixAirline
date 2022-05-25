@@ -67,6 +67,14 @@
         <servlet-name>ApproveServlet</servlet-name>
         <servlet-class>com.phoenixairline.controllers.ApproveServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddUserInfoServlet</servlet-name>
+        <servlet-class>com.phoenixairline.controllers.FlightControllers.AddUserInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updateUserInfoServlet</servlet-name>
+        <servlet-class>updateUserInfoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddFlightInfoServlet</servlet-name>
         <url-pattern>/AddFlightInfoServlet</url-pattern>
@@ -130,6 +138,14 @@
     <servlet-mapping>
         <servlet-name>ApproveServlet</servlet-name>
         <url-pattern>/ApproveServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddUserInfoServlet</servlet-name>
+        <url-pattern>/AddUserInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updateUserInfoServlet</servlet-name>
+        <url-pattern>/updateUserInfoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

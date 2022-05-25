@@ -96,7 +96,7 @@
     position: relative;
     display: inline-block;
     padding: 0 10px;
-                                                                                                                                                                                                                                           
+    
   }
   
 .dropdown-content {
@@ -192,23 +192,14 @@ td{
 }
 .details table thead td
 {
-    font-weight: 500;
+    font-weight: 600;
     
-}
-
-tbody:before {
-    /* This doesn't work because of border-collapse */
-    line-height:4vh;
-    content:".";
-    color:white; /* bacground color */
-    display:block;
 }
 
 .details .recent table tr
 {
     color:var(--black1);
     border-bottom:1px solid rgba(0,0,0,0.2);
-    margin-bottom: 25vh
     
 }
 
@@ -228,12 +219,12 @@ tbody:before {
 {
     padding:10px;
     border-radius: 10px;
-    margin: 15px;
+    margin: 10px;
     
 
 }
 
-/*.details .recent table tr td:last-child
+.details .recent table tr td:last-child
 {
     text-align: end;
 }
@@ -246,7 +237,7 @@ tbody:before {
 .details .recent table tr td:nth-child(3)
 {
     text-align: center;
-}*/
+}
 
 .status.ok
 {

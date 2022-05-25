@@ -33,12 +33,12 @@
         <ul>
             <li></li>
             <li>
-                <a href="html/Userflights.html">
-                    <span class="title">Filghts Management</span>
+                <a href="flightsManagement.jsp">
+                    <span class="title">Flights Management</span>
                 </a>
             </li>
             <li>
-                <a href="html/Reservations.html">
+                <a href="staffg1.jsp">
                     <span class="title">User Management</span>
                 </a>
             </li>
@@ -66,9 +66,11 @@
                 </a>
             </li> -->
             <li>
-                <a href="#">
-                    <span class="title">Sign Out</span>
-                </a>
+    <a href="<%=request.getContextPath()%>/LogoutServlet">
+        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+        <span class="title">Sign Out</span>
+    </a>
+
             </li>
            
         </ul>
@@ -76,16 +78,15 @@
             
             <!--end navbar-->
             
-            <br><br><br><br><br><br><br>
-
-            <center style="z-index: 900; margin-bottom: 200px"> <%=session.getAttribute("staffg1")%> </center>
 
        
  
             <!--===========Main=============-->
       <div class="main">
-        <form action="" method="POST">
+        <form  action="SearchFlightInfoServlet" method="POST">
           <div class="topbar">
+              SearchFlightInfoServlet
+               <div class="topbar">
             <div class="dropdown">Departure Airport 
                 <select class="drop-btn" name="" id="">
                   <option value="">country 1</option>
@@ -95,7 +96,7 @@
                 </select>
             </div>
   
-<!--            <div class="dropdown">Destination Airport 
+            <div class="dropdown">Destination Airport 
               <select class="drop-btn" name="" id="">
                 <option value="">country 1</option>
                 <option value="">country 2</option>
@@ -106,23 +107,34 @@
   
             <label for="" class="cal">Landing Date  <input type="date" id="cale" name="d-date" /></label>
               <button class="drop-btn">Submit</button>
-              <button class="drop-btn">Reset</button>-->
+              <button class="drop-btn">Reset</button>
+            
+          </div>
+              
+            <div class="dropdown"><input class="drop-btn" type="text" name="search_user" placeholder="Flight Id">
+
+                
+                <button type="submit"  value="View Users" name="view_users" class="drop-btn">View ALl Flights</button>
+
+            </div>
+  
+<!--            <div class="dropdown">Destination Airport 
+              <select class="drop-btn" name="" id="">
+                <option value="">country 1</option>
+                <option value="">country 2</option>
+                <option value="">country 3</option>
+                <option value="">country 4</option>
+              </select>
+            </div>-->
+  
+            <!--<label for="" class="cal">Landing Date  <input type="date" id="cale" name="d-date" /></label>-->
             
           </div>
         </form>
           
 
-        <div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></div>
+        <!--<div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></div>-->
 
-        <form action="SearchUsers_sServlet" method="POST">
-            <h3>View Flights</h3>
-            <input type="text" name="search_user" value="" />
-            <select name="search_type">
-                <option value="email">Email</option>
-                <option value="username">Username</option>
-            </select>
-            <input type="submit" value="View Users" name="view_users" />
-        </form>
 
         <table border="1">
             <thead>
@@ -134,18 +146,20 @@
           <div class="recent">
             <div class="cardheader">
               <h2>Flight Management </h2>
-              <a href="#" class="btn">View All</a>
+              <a href="AddUser.jsp" style="text-decoration: none" class="status ok">Add Flight</a>
             </div>
 
             <table>
-              <thead>
-                <tr>
-                  <td>First Name</td>
-                  <td>Last Name</td>
-                  <td>Email</td>
-                  <td>User Name</td>
-                  <td>User Type</td>
-                  <td>Action</td>
+                <thead >
+                    <tr style="box-shadow: 0 1px 10px black; border-radius: 12px; line-height: 4vh">
+                  <td>Take Off Airport</td>
+                  <td>Take Off Sate</td>
+                  <td>Landing Airport</td>
+                  <td>Landing Time</td>
+                  <td>Landing Date</td>
+                  <td>Gate</td>
+                  <td>Cost</td>
+                  <td>Aircaft Flight</td>
                 </tr>
               </thead>
 
@@ -164,9 +178,20 @@
                     <td><%=it.next()%></td>
                     <td><%=it.next()%></td>
                     <td><%=it.next()%></td>
+                     <td><%=it.next()%></td>
+                    <td><%=it.next()%></td>
+                    <td><%=it.next()%></td>
+
                   <td>
-                    <input type="submit"  class="status ok" value="Update" />
-                    <input type="submit" class="status ok" value="Delete" />
+                      <form action="" method="POST">
+                          <input type="submit"  class="status ok" value="Update" />
+                      </form>
+                      <br>
+                      <form action="" method="POST">
+                          <input type="submit" class="status not" value="Delete" />
+
+                      </form>
+                    
 
                   </td>
                 </tr>

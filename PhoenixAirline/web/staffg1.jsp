@@ -24,6 +24,7 @@
     <%}%>
     <body>
         
+        
 
         <div class="container">
       <div class="navigation">
@@ -33,12 +34,12 @@
         <ul>
             <li></li>
             <li>
-                <a href="html/Userflights.html">
-                    <span class="title">Filghts Management</span>
+                <a href="flightsManagement.jsp">
+                    <span class="title">Flights Management</span>
                 </a>
             </li>
             <li>
-                <a href="html/Reservations.html">
+                <a href="staffg1.jsp">
                     <span class="title">User Management</span>
                 </a>
             </li>
@@ -130,7 +131,7 @@
 
             <table>
                 <thead >
-                    <tr style="box-shadow: 0 1px 10px black; border-radius: 12px ">
+                    <tr style="box-shadow: 0 1px 10px black; border-radius: 12px; line-height: 4vh">
                   <td>First Name</td>
                   <td>Last Name</td>
                   <td>Email</td>
@@ -156,8 +157,15 @@
                     <td><%=it.next()%></td>
                     <td><%=it.next()%></td>
                   <td>
-                    <input type="submit"  class="status ok" value="Update" />
-                    <input type="submit" class="status not" value="Delete" />
+                      <form action="" method="POST">
+                          <input type="submit"  class="status ok" value="Update" />
+                      </form>
+                      <br>
+                      <form action="" method="POST">
+                          <input type="submit" class="status not" value="Delete" />
+
+                      </form>
+                    
 
                   </td>
                 </tr>

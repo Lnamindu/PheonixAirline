@@ -20,6 +20,23 @@ public class ViewFlightInfoServlet extends HttpServlet {
     public ViewFlightInfoServlet() {
         super();
     }
+    
+     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+
+        try {
+            FlightAccess flightAccess = new FlightAccess();
+            List flightDetails = flightAccess.viewAllFlightDetails();
+
+            request.setAttribute("result", flightDetails);
+
+            RequestDispatcher rd = request.getRequestDispatcher("AllFlightDetails.jsp");
+            rd.forward(request, response);
+        } catch (ServletException | IOException ex) {
+            System.out.println(ex);
+        }
+
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {

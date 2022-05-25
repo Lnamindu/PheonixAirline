@@ -12,31 +12,88 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Flightinfo.css" rel="stylesheet" type="text/css"/>
         <title>All Flight Details</title>
     </head>
     <body>
-        <h1>All Flight Details</h1>
-        <h1>Search Flight Details</h1>
-        <div>
-            <form method="post" action="SearchFlightInfoServlet">
-                Select option to Search data  
-                <input type="date" name="takeoff_date" value="" />
-                take off <select name="takeoff_airport">
-                    <option value="AAL">AAL</option>
-                    <option value="CMB">CMB</option>
-                </select>
-                landing <select name="landing_airport">
-                    <option value="ABV">ABV</option>
-                    <option value="CWL">CWL</option>
-                </select>
-                <input type="submit" name="Search"/>
-                <input type="reset" name="Cancel"/>
-            </form>
+        
+        <!--Navigation-->
+    <div class="container">
+      <div class="navigation">
+        <div class="logo">
+            <img src="media/Phoenixlogo.png" style="width: 200px; height:auto ; padding-top: 1vh;" alt="">
         </div>
-
-        <table border="1">
-            <thead>
-            <th>ID</th>
+        <ul>
+            <li></li>
+            <li>
+                <a href="<%=request.getContextPath()%>/ViewFlightInfoServlet">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Filght Informations</span>
+                </a>
+            </li>
+            <li>
+                <a href="<%=request.getContextPath()%>/SelectTicketServlet">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Reservations</span>
+                </a>
+            </li>
+            <li>
+                <a href="html/Userprofile.jsp">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="<%=request.getContextPath()%>/LogoutServlet">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign Out</span>
+                </a>
+            </li>
+           
+        </ul>
+    </div>
+        
+        <div class="main">
+        <form action="SearchFlightInfoServlet" method="POST">
+          <div class="topbar">
+            <div class="dropdown">Departure Airport 
+                <select class="drop-btn" name="takeoff_airport" id="">
+                  <option value="Colombo">Colombo</option>
+                  <option value="London">London</option>
+                  <option value="Melbourne">Melbourne</option>
+               </select>
+            </div>
+   
+            <div class="dropdown">Destination Airport 
+              <select class="drop-btn" name="landing_airport" id="">
+                <option value="Colombo">Colombo</option>
+                <option value="South Africa">South Africa</option>
+                <option value="England">England</option>
+              </select>
+            </div>
+  
+              <input class="drop-btn" type="date" name="takeoff_date" value="" />
+              
+                <input class="drop-btn"  type="submit" name="Search"/>
+                <input class="drop-btn"  type="reset" name="Cancel"/>
+            
+          </div>
+        </form>
+        
+        
+<!--        Flights-->
+        
+        <div class="details">
+          <div class="recent">
+            <div class="cardheader">
+              <h2>Flights</h2>
+              <a href="#" class="btn">View All</a>
+            </div>
+             
+        <table>
+            <thead style="box-shadow: 0 1px 10px black; padding: 20px">
+            <th></th>
             <th>Takeoff Airport</th>
             <th>Takeoff Time</th>
             <th>Takeoff Date</th>
@@ -68,7 +125,7 @@
                 <td><%=itr.next()%></td>
                 <td><%=itr.next()%></td>
                 <td><%=itr.next()%></td>
-                <td><input type="submit" value="Book Reservation" /></td>
+                <td><input type="submit" class="status ok" value="Book now" /></td>
         </form>
 
                 
@@ -153,5 +210,8 @@
                 }%>
         </table>
     </form>
+        </div>
+        </div>
+        </div>
 </body>
 </html>
